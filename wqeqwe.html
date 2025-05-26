@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoramento Ambiental para Residencial de Idosos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f6fad 0%, #91c5fc 100%);
+        }
+        .sensor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #3b82f6;
+        }
+        .environment-card:hover .environment-icon {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-temperature-low text-blue-500 text-2xl mr-2"></i>
+                <h1 class="text-xl font-bold text-gray-800">Monitoramento Sênior</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#objetivo" class="text-gray-600 hover:text-blue-500 transition">Objetivo</a>
+                <a href="#escopo" class="text-gray-600 hover:text-blue-500 transition">Escopo</a>
+                <a href="#infraestrutura" class="text-gray-600 hover:text-blue-500 transition">Infraestrutura</a>
+                <a href="#metodologia" class="text-gray-600 hover:text-blue-500 transition">Metodologia</a>
+                <a href="#equipe" class="text-gray-600 hover:text-blue-500 transition">Equipe</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Sistema de Monitoramento Ambiental</h1>
+                <p class="text-xl mb-8">Tecnologia IoT para garantir conforto e segurança em residenciais de idosos</p>
+                <a href="#contato" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">Saiba Mais</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://img.freepik.com/free-vector/smart-home-concept-illustration_114360-8204.jpg" alt="IoT Monitoring" class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Objective Section -->
+    <section id="objetivo" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Objetivo do Projeto</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://img.freepik.com/free-vector/elderly-people-concept-illustration_114360-10085.jpg" alt="Idosos felizes" class="rounded-lg shadow-md w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Ambiente Seguro e Confortável</h3>
+                        <p class="text-gray-700">Criar um residencial que proporcione segurança, conforto e bem-estar aos idosos através de monitoramento ambiental constante.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-semibold mb-3 text-green-600">Tecnologia IoT Integrada</h3>
+                        <p class="text-gray-700">Utilizar sensores de temperatura e umidade conectados em rede inteligente para manter condições ideais em todos os ambientes.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 text-purple-600">Socialização e Autonomia</h3>
+                        <p class="text-gray-700">Promover a interação social e autonomia dos residentes através de dispositivos tecnológicos distribuídos estrategicamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope Section -->
+    <section id="escopo" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Escopo do Projeto</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Modelagem 3D</h3>
+                    <p class="text-gray-600">Criação de modelo 3D completo da infraestrutura de rede com posicionamento de todos os sensores e dispositivos.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Layout Detalhado</h3>
+                    <p class="text-gray-600">Planejamento detalhado da instalação em todos os 16 ambientes do residencial, com especificação de equipamentos.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Simulação de Rede</h3>
+                    <p class="text-gray-600">Configuração e testes da rede no Cisco Packet Tracer para garantir comunicação eficiente entre todos os dispositivos.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4 text-center">Ambientes do Residencial</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-blue-500 text-3xl mb-2 transition">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <p>16 Quartos</p>
+                    </div>
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-green-500 text-3xl mb-2 transition">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <p>Sala Administrativa</p>
+                    </div>
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-yellow-500 text-3xl mb-2 transition">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <p>Refeitório</p>
+                    </div>
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-red-500 text-3xl mb-2 transition">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <p>Área de Exercícios</p>
+                    </div>
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-purple-500 text-3xl mb-2 transition">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <p>Enfermaria</p>
+                    </div>
+                    <div class="environment-card p-4 text-center">
+                        <div class="environment-icon text-indigo-500 text-3xl mb-2 transition">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <p>Estacionamento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infraestrutura" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Infraestrutura e Modelagem</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 mb-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">Elementos Modelados</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="sensor-card bg-gray-50 p-5 rounded-lg border border-gray-200 transition">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-wifi text-blue-500 text-xl"></i>
+                                </div>
+                                <h4 class="font-medium">Roteadores e Switches</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Dispositivos de rede posicionados estrategicamente para otimizar a cobertura.</p>
+                        </div>
+                        
+                        <div class="sensor-card bg-gray-50 p-5 rounded-lg border border-gray-200 transition">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-temperature-low text-green-500 text-xl"></i>
+                                </div>
+                                <h4 class="font-medium">Sensores IoT</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Monitoramento contínuo de temperatura e umidade em todos os ambientes.</p>
+                        </div>
+                        
+                        <div class="sensor-card bg-gray-50 p-5 rounded-lg border border-gray-200 transition">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-tv text-purple-500 text-xl"></i>
+                                </div>
+                                <h4 class="font-medium">Dispositivos Eletrônicos</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Televisões e celulares para entretenimento e comunicação dos residentes.</p>
+                        </div>
+                        
+                        <div class="sensor-card bg-gray-50 p-5 rounded-lg border border-gray-200 transition">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-red-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-video text-red-500 text-xl"></i>
+                                </div>
+                                <h4 class="font-medium">Sistema de Segurança</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Câmeras no estacionamento para monitoramento de áreas externas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-700">Distribuição de Equipamentos</h3>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-bed text-blue-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Quartos (16 unidades)</h4>
+                                    <p class="text-gray-600 text-sm">1 sensor de temperatura/umidade, 1 celular, 1 televisão por quarto</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-desktop text-green-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Sala Administrativa</h4>
+                                    <p class="text-gray-600 text-sm">8 computadores, 1 switch, sensores ambientais</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-dumbbell text-yellow-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Área de Exercícios</h4>
+                                    <p class="text-gray-600 text-sm">1 televisão, sensores ambientais</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-car text-red-500 text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Estacionamento</h4>
+                                    <p class="text-gray-600 text-sm">2 câmeras de segurança</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-center">Ferramentas Utilizadas</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="text-center">
+                        <div class="bg-white p-4 rounded-full shadow-md inline-block mb-2">
+                            <i class="fas fa-cube text-blue-500 text-3xl"></i>
+                        </div>
+                        <p>Tinkercad</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white p-4 rounded-full shadow-md inline-block mb-2">
+                            <i class="fas fa-network-wired text-green-500 text-3xl"></i>
+                        </div>
+                        <p>Cisco Packet Tracer</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white p-4 rounded-full shadow-md inline-block mb-2">
+                            <i class="fab fa-trello text-purple-500 text-3xl"></i>
+                        </div>
+                        <p>Trello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="metodologia" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Metodologia SCRUM</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- Sprint 1 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 bg-blue-500 rounded-full w-4 h-4"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-semibold text-blue-600">Sprint 1</h3>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">1 semana</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">Modelagem 3D, Layout detalhado, Planejamento de Rede</p>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-user text-blue-500"></i>
+                                </div>
+                                <span class="text-sm text-gray-600">Responsável: Gustavo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sprint 2 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 bg-green-500 rounded-full w-4 h-4"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-semibold text-green-600">Sprint 2</h3>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">1 semana</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">Simulação da rede, Testes de comunicação, Ajustes</p>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-users text-green-500"></i>
+                                </div>
+                                <span class="text-sm text-gray-600">Responsáveis: Vitor e Harrison</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sprint 3 -->
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 bg-purple-500 rounded-full w-4 h-4"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-semibold text-purple-600">Sprint 3</h3>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">1 semana</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">Construção e integração</p>
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-users text-purple-500"></i>
+                                </div>
+                                <span class="text-sm text-gray-600">Responsáveis: Maysa e Manu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-6 rounded-lg shadow-md max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold mb-4 text-center">Gestão com Trello</h3>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3 bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-600 mb-3 flex items-center">
+                            <i class="fas fa-list-ul mr-2"></i> Sprint 1
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Modelagem 3D inicial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Levantamento de ambientes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Planejamento de rede</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3 bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-green-600 mb-3 flex items-center">
+                            <i class="fas fa-list-ul mr-2"></i> Sprint 2
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Configuração no Packet Tracer</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Testes de comunicação</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Ajustes na infraestrutura</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3 bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-purple-600 mb-3 flex items-center">
+                            <i class="fas fa-list-ul mr-2"></i> Sprint 3
+                        </h4>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Instalação física</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Integração dos sistemas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i>
+                                <span>Testes finais</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossa Equipe</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-blue-100 w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-blue-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Gustavo</h3>
+                    <p class="text-blue-600 mb-3">Modelagem 3D</p>
+                    <p class="text-gray-600 text-sm">Responsável pela modelagem inicial e planejamento da rede.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-green-100 w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-green-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Vitor</h3>
+                    <p class="text-green-600 mb-3">Simulação de Rede</p>
+                    <p class="text-gray-600 text-sm">Especialista em configuração e testes de comunicação.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-yellow-100 w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-yellow-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Harrison</h3>
+                    <p class="text-yellow-600 mb-3">Simulação de Rede</p>
+                    <p class="text-gray-600 text-sm">Auxiliar nos testes e ajustes da infraestrutura.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-purple-100 w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-purple-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Maysa e Manu</h3>
+                    <p class="text-purple-600 mb-3">Construção</p>
+                    <p class="text-gray-600 text-sm">Dupla responsável pela instalação física e integração final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Considerations -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8">Considerações Finais</h2>
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-sm">
+                <p class="mb-4">Este projeto visa proporcionar segurança, bem-estar e autonomia aos idosos da casa de repouso, através da tecnologia IoT integrada com uma gestão de rede eficiente e confiável.</p>
+                <p>A adoção da metodologia SCRUM garante a agilidade, entrega contínua e a qualidade do produto final, com sprints bem definidas e equipe comprometida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Entre em Contato</h2>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 mb-2">Assunto</label>
+                        <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition w-full md:w-auto">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-temperature-low text-blue-400 text-2xl mr-2"></i>
+                        <h2 class="text-xl font-bold">Monitoramento Sênior</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-sm">Tecnologia para o bem-estar da terceira idade.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle functionality would go here
+        // This is just a placeholder as per requirements to use only HTML/CSS/JS
+    </script>
+</body>
+</html>
